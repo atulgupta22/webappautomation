@@ -1,0 +1,20 @@
+{
+  "name": "webappautomation",
+  "version": "1.0.0",
+  "description": "this is package.json file",
+  "main": "index.js",
+  "dependencies": {
+    "protractor-jasmine2-html-reporter": "^0.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "protractor config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://atulgupta22@bitbucket.org/em3agritech/webappautomation.git"
+  },
+  "author": "Atul",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/em3agritech/webappautomation#readme"
+}
