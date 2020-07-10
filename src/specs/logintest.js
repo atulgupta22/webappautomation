@@ -34,7 +34,7 @@ describe('Samadhan V2 Login Functionality Test', function() {
 	loginpage.setusername("admin@agri.com");
 	loginpage.setpassword("Agri@123");
 	expect(loginpage.username_validation()).toEqual('false');
-	expect(loginpage.username_validation()).toEqual('true');
+	expect(loginpage.username_validation()).toEqual('false');
 	loginpage.clicklogin();
 	expect((loginpage.dashboard()).isPresent()).toBeTruthy();
   });

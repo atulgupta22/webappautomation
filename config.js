@@ -27,12 +27,12 @@ exports.config = {
           baseUrl:  "http://uatsamadhanv2.em3agri.com/login",
             },  
     
-  // capabilities: {
-  //   browserName: 'chrome',
-  //   chromeOptions: {
-  //           //args: ["--headless", "--disable-gpu", "--window-size=1280x1024"],
-  //           w3c: false  //enabling the below capability enables chrome to use legacy API. (sendKeysToActiveElement)
-  //       },
+  capabilities: {
+    browserName: 'chrome',
+    chromeOptions: {
+            //args: ["--headless", "--disable-gpu", "--window-size=1280x1024"],
+            w3c: false  //enabling the below capability enables chrome to use legacy API. (sendKeysToActiveElement)
+        },
     
     
       
@@ -48,15 +48,15 @@ exports.config = {
     // set of capabilities. This is only needed if shardTestFiles is true.
     // Default is 1.
     maxInstances: 2,
-    //},
+    },
 
 
 //Capabilities to be passed to the webdriver instance.
-multiCapabilities: [{
-  'browserName': 'firefox'
-}, {
-  'browserName': 'chrome'
-}],
+// multiCapabilities: [{
+//   'browserName': 'firefox'
+// }, {
+//   'browserName': 'chrome'
+// }],
 
 framework: 'jasmine2',
 
