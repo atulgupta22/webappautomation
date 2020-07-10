@@ -6,13 +6,15 @@ var LoginPage = require('./../pageobjects/loginPage.po.js');
 var loginpage = new LoginPage();
 
 describe('Samadhan V2 Login Functionality Test', function() {
+
+	beforeEach(function() {
+		loginpage.get();
+	  });
   
   it('Entering Blank Login Credential', function() {
-    loginpage.get();
 	loginpage.setusername("");
 	loginpage.setpassword("");
 	loginpage.clicklogin();
-	expect(2*2).toEqual(4);
 	expect(loginpage.username_validation()).toEqual('true');
 	expect(loginpage.username_validation()).toEqual('true');
 	expect(loginpage.username_validation_text()).toEqual('User Name is required');
@@ -20,7 +22,6 @@ describe('Samadhan V2 Login Functionality Test', function() {
   });
 
   it('Entering Invalid Valid Login Credential', function() {
-    loginpage.get();
 	loginpage.setusername("admin@agri.com");
 	loginpage.setpassword("agri@12");
 	expect(loginpage.username_validation()).toEqual('false');
@@ -30,7 +31,6 @@ describe('Samadhan V2 Login Functionality Test', function() {
   });
 
    it('Entering Valid Login Credential', function() {
-    loginpage.get();
 	loginpage.setusername("admin@agri.com");
 	loginpage.setpassword("Agri@123");
 	expect(loginpage.username_validation()).toEqual('false');
