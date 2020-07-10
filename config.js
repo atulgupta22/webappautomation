@@ -6,8 +6,8 @@ var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(
 exports.config = {
    // your config here ..
    //The address of a running selenium server.
-  seleniumAddress: 'http://localhost:4444/wd/hub',
-  //directConnect: true,
+  //seleniumAddress: 'http://localhost:4444/wd/hub',
+  directConnect: true,
 
   //Here we specify the name of the specs files.
   //specs: ['./src/./specs/**/*.js'],
